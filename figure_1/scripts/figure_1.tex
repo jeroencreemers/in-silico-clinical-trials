@@ -1,0 +1,60 @@
+\documentclass[tikz]{standalone}
+\pagestyle{empty}
+
+%\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{positioning,calc,fit,decorations.pathreplacing,arrows,positioning,backgrounds}
+
+% Font settings:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pxfonts}
+\newcommand{\figf}{\sffamily\bfseries\small} %Defines the font used for the labelling of figure panels.
+
+% Color settings:
+%\definecolor{hivc}{cmyk}{0,0.80,0.83,0.13}                %\definecolor{hivc}{HTML}{DE2D26}
+%\definecolor{hivc}{RGB}{24,116,205}
+%\definecolor{selfc}{cmyk}{0,0,0,0.6}                      %\colorlet{selfc}{gray!80!white}
+%\definecolor{Rblue}{RGB}{100,149,237}
+%\definecolor{k1}{cmyk}{0,0,0,1}                           %\definecolor{k1}{RGB}{0,0,0}
+%\definecolor{k2}{cmyk}{0,0.45,1,0}                        %\definecolor{k2}{RGB}{255,140,0}
+%\definecolor{k3}{cmyk}{0,0.8,0.83,0.13}                   %\definecolor{k3}{RGB}{222,45,38}
+%\definecolor{k4}{cmyk}{1,1,0,0}                           %\definecolor{k4}{RGB}{0,0,238}
+%\definecolor{k5}{cmyk}{0.76,0,0.76,0.3}                   %\definecolor{k5}{RGB}{34,139,34}
+%\definecolor{k6}{cmyk}{0,0,0,0.3}                         %\definecolor{k6}{RGB}{179,179,179}
+
+
+%__________________________________________________________________________
+%__________________________________________________________________________
+%%----BEGINNING OF DOCUMENT
+%__________________________________________________________________________
+%__________________________________________________________________________
+
+\begin{document}
+\scriptsize
+%---------------------------------FIGURE 1: Microsimulation---------------------------------
+
+\begin{tikzpicture}[anchor=north west]
+%\filldraw[white] (0,0) rectangle (17.92445,-0.1);
+%\draw[red] (0,0) rectangle (12,-0.1);
+\clip (0,0) rectangle (19,-11);
+
+% --- Row 1 ---
+
+\begin{scope}[xshift = 0cm, yshift = 0cm]
+  % Plots of Survival data and Fitted Model on survival data
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/plot_lung_ncctg.pdf}};
+  \node[anchor = north west] at (6.5,-0.5) {\includegraphics{plots/figure_1b_ipi_placebo.pdf}};
+  \node[anchor = north west] at (12.5,-0.5) {\includegraphics{plots/figure_1c_dtic_nivo.pdf}};
+\end{scope}
+
+\begin{scope}[xshift = 0cm, yshift = -5cm]
+  % Plots of Survival data and Fitted Model on survival data
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/figure_1d.pdf}};
+  \node[anchor = north west] at (6.5,-0.5) {\includegraphics{plots/figure_1e.pdf}};
+  \node[anchor = north west] at (12.5,-0.5) {\includegraphics{plots/figure_1f.pdf}};
+\end{scope}
+
+
+\end{tikzpicture}
+\end{document}
