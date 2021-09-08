@@ -1,0 +1,33 @@
+\documentclass[tikz]{standalone}
+\pagestyle{empty}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{positioning,calc,fit,decorations.pathreplacing,arrows,positioning,backgrounds}
+
+% Font settings:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pxfonts}
+\newcommand{\figf}{\sffamily\bfseries\small} 
+
+%__________________________________________________________________________
+%%----BEGINNING OF DOCUMENT
+%__________________________________________________________________________
+
+\begin{document}
+\scriptsize
+%----------------------------- FIGURE 6 -----------------------------------
+
+\begin{tikzpicture}[anchor=north west]
+\clip (0,0) rectangle (18,-13);
+
+\begin{scope}[xshift = 0cm, yshift = 0cm]
+  % Interim analyses with strong (a), intermediate (b), and no (c) treatmenteffect
+  \node[anchor = north west] at (0,-0.5) {\includegraphics{plots/figure_6a.pdf}};
+  \node[anchor = north west] at (0,-4.5) {\includegraphics{plots/figure_6b.pdf}};
+  \node[anchor = north west] at (0,-8.5) {\includegraphics{plots/figure_6c.pdf}};
+\end{scope}
+
+
+\end{tikzpicture}
+\end{document}
