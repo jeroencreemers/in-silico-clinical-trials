@@ -1,0 +1,57 @@
+\documentclass[tikz]{standalone}
+\pagestyle{empty}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{positioning,calc,fit,decorations.pathreplacing,arrows,positioning,backgrounds}
+
+% Font settings:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pxfonts}
+\newcommand{\figf}{\sffamily\bfseries\small} %Defines the font used for the labelling of figure panels.
+
+%__________________________________________________________________________
+%%----BEGINNING OF DOCUMENT
+%__________________________________________________________________________
+
+\begin{document}
+\scriptsize
+%---------------------------------FIGURE 3---------------------------------
+
+\begin{tikzpicture}[anchor=north west]
+\clip (0,0) rectangle (16.5,-21);
+
+% Panels A, B, C, and D
+
+\begin{scope}[xshift = 0cm, yshift = 0cm]
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/figure_3A.pdf}};
+  \node at (0.5,-0.5) {\figf A};
+  \node at (1.5,-0.5) {\small Chemotherapy vs. Placebo}; 
+\end{scope}
+
+\begin{scope}[xshift = 0cm, yshift = -4cm]
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/figure_3B.pdf}};
+  \node at (0.5,-0.5) {\figf B};
+  \node at (1.5,-0.5) {\small Immunotherapy vs. Placebo};
+\end{scope}
+
+\begin{scope}[xshift = 0cm, yshift = -8cm]
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/figure_3C.pdf}};
+  \node at (0.5,-0.5) {\figf C};
+  \node at (1.5,-0.5) {\small Chemoimmunotherapy vs. Chemotherapy};
+\end{scope}
+
+\begin{scope}[xshift = 0cm, yshift = -12cm]
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/figure_3D.pdf}};
+  \node at (0.5,-0.5) {\figf D};
+  \node at (1.5,-0.5) {\small Immunotherapy vs. Chemotherapy};
+\end{scope}
+
+\begin{scope}[xshift = 0cm, yshift = -16cm]
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/figure_3E.pdf}};
+  \node at (0.5,-0.5) {\figf E};
+  \node at (1.5,-0.5) {\small Induction chemotherapy, followed by immunotherapy vs. Immunotherapy};
+\end{scope}
+
+\end{tikzpicture}
+\end{document}
