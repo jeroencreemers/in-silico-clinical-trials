@@ -1,0 +1,40 @@
+\documentclass[tikz]{standalone}
+\pagestyle{empty}
+
+%\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{positioning,calc,fit,decorations.pathreplacing,arrows,positioning,backgrounds}
+
+% Font settings:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pxfonts}
+\newcommand{\figf}{\sffamily\bfseries\small} %Defines the font used for the labelling of figure panels.
+
+%__________________________________________________________________________
+%%----BEGINNING OF DOCUMENT
+%__________________________________________________________________________
+
+\begin{document}
+\scriptsize
+%------------------------------------FIGURE 5------------------------------
+
+
+\begin{tikzpicture}[anchor=north west]
+\clip (0,0) rectangle (13, -13);
+
+% --- Row 1 ---
+
+\begin{scope}[xshift = 0cm, yshift = 0cm]
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/figure_5A1.pdf}};
+  \node[anchor = north west] at (6.5,-0.5) {\includegraphics{plots/figure_5A2.pdf}};
+\end{scope}
+
+% --- Row 2 ---
+\begin{scope}[xshift = 0cm, yshift = -6cm]
+  \node[anchor = north west] at (0.5,-0.5) {\includegraphics{plots/figure_5B1.pdf}};
+  \node[anchor = north west] at (6.5,-0.5) {\includegraphics{plots/figure_5B2.pdf}};
+\end{scope}
+
+\end{tikzpicture}
+\end{document}
