@@ -1,0 +1,50 @@
+\documentclass[tikz]{standalone}
+\pagestyle{empty}
+
+%\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{positioning,calc,fit,decorations.pathreplacing,arrows,positioning,backgrounds}
+
+% Font settings:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pxfonts}
+\newcommand{\figf}{\sffamily\bfseries\small} %Defines the font used for the labelling of figure panels.
+
+%__________________________________________________________________________
+%%----BEGINNING OF DOCUMENT
+%__________________________________________________________________________
+
+\begin{document}
+\scriptsize
+%---------------------------------FIGURE 4---------------------------------
+
+\begin{tikzpicture}[anchor=north west]
+%\filldraw[white] (0,0) rectangle (17.92445,-0.1);
+%\draw[red] (0,0) rectangle (12,-0.1);
+\clip (0,0) rectangle (14,-11);
+
+% Panels A, B, C, and D
+
+\begin{scope}[xshift = 0cm, yshift = 0cm]
+  \node[anchor = north west] at (0.5,-1) {\includegraphics{plots/figure_4A.pdf}};
+  \node at (0.5,-0.5) {\figf A};
+  \node at (2,-0.5) {\small Chemotherapy vs. Placebo};
+  \node[anchor = north west] at (7.25,-1) {\includegraphics{plots/figure_4B.pdf}};
+  \node at (7.25,-0.5) {\figf B};
+  \node at (8.5,-0.5) {\small Immunotherapy vs. Placebo};
+\end{scope}
+
+\begin{scope}[xshift = 0cm, yshift = -4.65cm]
+  \fill [white] (14,-.5) rectangle (0,-2);
+  \node[anchor = north west] at (0.5,-1) {\includegraphics{plots/figure_4C.pdf}};
+  \node at (0.5,-0.5) {\figf C};
+  \node at (1,-0.5) {\small Chemoimmunotherapy vs. Chemotherapy};
+  \node[anchor = north west] at (7.25,-1) {\includegraphics{plots/figure_4D.pdf}};
+  \node at (7.25,-0.5) {\figf D};
+  \node at (8.5,-0.5) {\small Immunotherapy vs. Chemotherapy};
+\end{scope}
+
+
+\end{tikzpicture}
+\end{document}
