@@ -19,7 +19,7 @@ To run the compiled model from within R, you need R and the dplyr package instal
 
 No installation is required to run this software, but you do need to compile the [simulation model](model/model.cpp). Since this is just a single file, it should only take a couple of seconds on a reasonably modern computer.
 
-## Demo and Instructions
+## Demo and instructions
 
 The [provided demo script in R](model/demo.R) shows an example how you can run the simulation model to generate a virtual immunotherapy trial with 140 patients in the treatment arm and 70 patients in the control arm. This should generate a Kaplan-Meier plot showing a favourable effect of the treatment. You can change the difference between the curves by setting the treatment effect size to a different value. Simulating 210 patients should take less than a minute on a typical desktop computer. 
 
