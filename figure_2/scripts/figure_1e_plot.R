@@ -3,7 +3,7 @@ library(dplyr)
 library(survminer)
 library(survival)
 
-source("../../misc/theme.R")
+source("../misc/theme.R")
 load("data/figure_1e_data.RData")
 
 

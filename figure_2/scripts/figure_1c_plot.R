@@ -2,7 +2,7 @@ library(survminer)
 library(survival)
 library(dplyr)
 
-source("../../misc/theme.R")
+source("../misc/theme.R")
 
 load("data/figure_1c_KM_melanoma.RData")
 

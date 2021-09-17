@@ -13,7 +13,7 @@ plan(multisession, workers = 4)
 
 # Source functions to:
 # (1) Call ODE model
-source("../../model/call_model_function.R")
+source("../model/call_model_function.R")
 
 # Load 
 load("data/figure_1b_KM_melanoma.RData")
