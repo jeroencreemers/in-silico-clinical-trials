@@ -15,9 +15,10 @@ call.model <- function(R=5, xi=0.001,
                        lower_growth = 1, 
                        chemo_duration=182, 
                        immuno_start=0, 
-                       chemo_start=0){
-
-  read.table(text=system2("../model/tumormodel", c("--R",R,
+                       chemo_start=0,
+                       path.to.model="../model/tumormodel"){
+	require( dplyr )
+  read.table(text=system2(path.to.model, c("--R",R,
                                                     "--xi",xi,
                                                     "--stochastic-killing", stochastic_killing, 
                                                     "--stochastic-growth", stochastic_growth, 
