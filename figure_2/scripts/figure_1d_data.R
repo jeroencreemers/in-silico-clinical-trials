@@ -15,7 +15,7 @@ set.seed(9)
 # (1) Calculate paramater values corresponding to a certain survival
 # (2) Call ODE model
 source("scripts/survival_to_param_function.R") # Dependedent on isosurface.RData
-source("../../model/call_model_function.R")
+source("../model/call_model_function.R")
 
 # Load 
 load("data/figure_1a_KM_NCCTG.RData")

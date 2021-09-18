@@ -3,7 +3,7 @@ library(dplyr)
 library(survminer)
 library(survival)
 
-source("../../misc/theme.R")
+source("../misc/theme.R")
 load("data/figure_1d_data.RData")
 
 status <- rep(1, length(simulated_survival_data$OS))

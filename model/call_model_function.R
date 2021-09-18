@@ -1,4 +1,7 @@
-# Function to call C++ model from within R 
+#
+# Function to call C++ model from within R. This function is called from within the subfolders of the  
+# "figure[n]/"-folders.
+#
 
 call.model <- function(R=5, xi=0.001, 
                        stochastic_killing=0, stochastic_growth=0, 
@@ -12,9 +15,10 @@ call.model <- function(R=5, xi=0.001,
                        lower_growth = 1, 
                        chemo_duration=182, 
                        immuno_start=0, 
-                       chemo_start=0){
-
-  read.table(text=system2("../../model/tumormodel", c("--R",R,
+                       chemo_start=0,
+                       path.to.model="../model/tumormodel"){
+	require( dplyr )
+  read.table(text=system2(path.to.model, c("--R",R,
                                                     "--xi",xi,
                                                     "--stochastic-killing", stochastic_killing, 
                                                     "--stochastic-growth", stochastic_growth, 
@@ -57,4 +61,4 @@ call.model <- function(R=5, xi=0.001,
                        no = length(time) - time_diagnosis[1]), # OS = time from diagnosis to end of simulation (either death or uncensored)
            status = if_else(OS[1] == 1825, true = 0, false = 1)
            ) 
-}  
+}

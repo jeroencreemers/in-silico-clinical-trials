@@ -30,7 +30,7 @@ data/figure_1a_KM_NCCTG.RData : scripts/figure_1a_data.R
 
 plots/plot_lung_ncctg.pdf : scripts/plot_lung_ncctg.R \
 															data/figure_1a_KM_NCCTG.RData \
-															../../misc/theme.R
+															../misc/theme.R
 	Rscript $<
 ##################################################
 
@@ -41,7 +41,7 @@ data/figure_1b_KM_melanoma.RData : scripts/figure_1b_data.R \
 
 plots/figure_1b_ipi_placebo.pdf : scripts/figure_1b_plot.R \
 														      data/figure_1b_KM_melanoma.RData \
-														      ../../misc/theme.R
+														      ../misc/theme.R
 	Rscript $<
 ##################################################
 
@@ -52,7 +52,7 @@ data/figure_1c_KM_melanoma.RData : scripts/figure_1c_data.R \
 
 plots/figure_1c_dtic_nivo.pdf : scripts/figure_1c_plot.R \
 														    data/figure_1c_KM_melanoma.RData \
-														    ../../misc/theme.R
+														    ../misc/theme.R
 	Rscript $<
 ############################################################
 
@@ -66,7 +66,7 @@ plots/figure_1c_dtic_nivo.pdf : scripts/figure_1c_plot.R \
 # the OS for each combination.
 # Note: data also provided.
 #data/data_grid_microsimulation.RData : scripts/data_grid_microsimulation.R \
-																			 ../../model/call_model_function.R
+																			 ../model/call_model_function.R
 #	Rscript $<
 
 # Extract the isosurface of the grid
@@ -78,41 +78,41 @@ plots/figure_1c_dtic_nivo.pdf : scripts/figure_1c_plot.R \
 #### Figure 1B - panel 1: Microsimulation of figure 1A panel 1 ####
 data/figure_1d_data.RData : scripts/figure_1d_data.R \
 														scripts/survival_to_param_function.R \
-														../../model/call_model_function.R \
+														../model/call_model_function.R \
 														data/figure_1a_KM_NCCTG.RData \
 														data/isosurface.RData
 	Rscript $<
 
 plots/figure_1d.pdf : scripts/figure_1d_plot.R \
 											data/figure_1d_data.RData \
-											../../misc/theme.R
+											../misc/theme.R
 	Rscript $<
 ####################################################################
 
 #### Figure 1B - panel 2: Microsimulation of figure 1A panel 2 ####
 data/figure_1e_data.RData : scripts/figure_1e_data.R \
 														scripts/survival_to_param_function.R \
-														../../model/call_model_function.R \
+														../model/call_model_function.R \
 														data/figure_1b_KM_melanoma.RData \
 														data/isosurface.RData
 	Rscript $<
 
 plots/figure_1e.pdf : scripts/figure_1e_plot.R \
 											data/figure_1e_data.RData \
-											../../misc/theme.R
+											../misc/theme.R
 	Rscript $<
 ####################################################################
 
 #### Figure 1B - panel 3: Microsimulation of figure 1A panel 3 ####
 data/figure_1f_data.RData : scripts/figure_1f_data.R \
 														scripts/survival_to_param_function.R \
-														../../model/call_model_function.R \
+														../model/call_model_function.R \
 														data/figure_1c_KM_melanoma.RData \
 														data/isosurface.RData
 	Rscript $<
 
 plots/figure_1f.pdf : scripts/figure_1f_plot.R \
-											../../misc/theme.R \
+											../misc/theme.R \
 											data/figure_1f_data.RData
 	Rscript $<
 ###################################################################
