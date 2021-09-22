@@ -3,7 +3,7 @@
 library(ggplot2)
 
 load("data/figure_4a_data.RData")
-
+dir.create(file.path(getwd(), "plots"), showWarnings = FALSE)
 source("scripts/theme.R")
 
 # Plot

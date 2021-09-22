@@ -2,6 +2,7 @@
 library(ggplot2)
 
 source("scripts/theme.R")
+dir.create(file.path(getwd(), "plots"), showWarnings = FALSE)
 load("data/figure_5b1.RData")
 
 ggplot(power_microsimulation, aes(x = timepoint, y = power_microsimulation, linetype = as.factor(arm_size))) + 

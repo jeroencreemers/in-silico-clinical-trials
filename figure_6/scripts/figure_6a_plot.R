@@ -6,6 +6,7 @@ library(ggsankey)
 library(cowplot)
 
 load("data/figure_6a_wrangled.RData")
+dir.create(file.path(getwd(), "plots"), showWarnings = FALSE)
 
 # Function to prepare dataset for plot
 prepare_dataset <- function(x){

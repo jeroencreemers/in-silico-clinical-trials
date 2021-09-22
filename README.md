@@ -27,7 +27,7 @@ To adapt the demo to change further parameter settings, have a look at [the R fu
 
 ## List of R packages
 
-- Tidyverse collection of packages
+- Tidyverse collection of packages (including furrr, readxl)
 - survival (version 3.2-7)
 - survminer (version 0.4.8)
 - flexsurv (1.1.1)
