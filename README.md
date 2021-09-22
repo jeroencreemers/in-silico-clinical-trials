@@ -25,3 +25,14 @@ The [provided demo script in R](model/demo.R) shows an example how you can run t
 
 To adapt the demo to change further parameter settings, have a look at [the R function that calls the simulation model](model/call_model_function.R), which lists all parameters. See the manuscript for the default values we used. Typically you will want to generate parameters randomly by drawing their values from some distribution that models heterogeneity between patients; for instance, in our demo, we use a Gamma distribution to generate a tumor growth rate for each patient.
 
+## List of R packages
+
+- Tidyverse collection of packages
+- survival (version 3.2-7)
+- survminer (version 0.4.8)
+- flexsurv (1.1.1)
+- IPDfromKM (version 0.1.10)
+- oce (version 1.3-0)
+- bshazard (version 1.1)
+- patchwork (version 1.1.1)
+- cowplot (version 1.1.1)
