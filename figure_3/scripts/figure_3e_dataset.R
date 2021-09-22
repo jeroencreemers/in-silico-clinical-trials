@@ -1,10 +1,10 @@
 library(tidyverse)
 
-load("temp/lookup_table_survival_immuno.RData")
+load("data/lookup_table_survival_immuno.RData")
 df_chemo <- cbind(df, therapy = "immuno") %>% 
   filter(randomization == "treatment")
 
-load("temp/lookup_table_survival_firstchemo_thenimmuno.RData")
+load("data/lookup_table_survival_firstchemo_thenimmuno.RData")
 df_chemoimmuno <- cbind(df, therapy = "firstchemo_thenimmuno") %>% 
   filter(randomization == "treatment")
 
